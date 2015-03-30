@@ -6,6 +6,7 @@ var browserSync = require('browser-sync');
 var $ = require('gulp-load-plugins')();
 
 module.exports = function(options) {
+
   gulp.task('markups', function() {
     function renameToHtml(path) {
       path.extname = '.html';

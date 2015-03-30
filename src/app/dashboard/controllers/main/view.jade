@@ -1,5 +1,8 @@
-extends ../../views/layouts/guest
+extends ../../../common/views/layouts/guest
 
 block content
-  .container {{hello}} content
-    div(ng-include="app/dashboard/components/navbar/view.html")
+  .dashboard
+    .row
+      .medium-6.columns {{hello}}
+      .medium-6.columns dashboard
+      .medium-12.columns abbish is a good boy

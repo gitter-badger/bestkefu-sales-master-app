@@ -5,8 +5,12 @@ angular.module('sales.goods')
     $stateProvider
       .state('goods', {
         url: '/goods',
-        templateUrl: 'app/goods/controllers/main/view.html',
-        controller: 'goods.main as controller'
+        views: {
+          '@': {
+            templateUrl: 'app/goods/controllers/main/view.html',
+            controller: 'goods.main as controller'
+          }
+        }
       });
   })
   .controller('goods.main', function ($scope, $window) {

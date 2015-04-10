@@ -1,14 +1,14 @@
 'use strict';
 
-describe('sales.dashboard main controller test case', function(){
+describe('sales.goods main controller test case', function(){
   var scope;
 
-  beforeEach(module('sales.dashboard'));
+  beforeEach(module('sales.goods'));
 
   beforeEach(inject(function($rootScope, $controller) {
     scope = $rootScope.$new();
 
-    $controller('dashboard.main', {
+    $controller('goods.main', {
       $scope: scope
     });
   }));
@@ -16,6 +16,6 @@ describe('sales.dashboard main controller test case', function(){
   it('should define name', inject(function($controller) {
 
     expect(scope.name).toBeDefined();
-    expect(scope.name).toBe('dashboard.main');
+    expect(scope.name).toBe('goods.main');
   }));
 });

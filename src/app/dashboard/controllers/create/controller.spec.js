@@ -8,7 +8,7 @@ describe('sales.dashboard main controller test case', function(){
   beforeEach(inject(function($rootScope, $controller) {
     scope = $rootScope.$new();
 
-    $controller('dashboard.main', {
+    $controller('dashboard.create', {
       $scope: scope
     });
   }));
@@ -16,6 +16,8 @@ describe('sales.dashboard main controller test case', function(){
   it('should define name', inject(function($controller) {
 
     expect(scope.name).toBeDefined();
-    expect(scope.name).toBe('dashboard.main');
+    expect(scope.name).toBe('dashboard.create');
+
+    console.log($controller);
   }));
 });

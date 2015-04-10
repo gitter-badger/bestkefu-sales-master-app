@@ -1,8 +1,12 @@
-extends ../../../common/views/layouts/guest
+extends ../../../common/views/layouts/main
 
 block content
   .dashboard
     .row
-      .medium-6.columns {{hello}}
-      .medium-6.columns dashboard
-      .medium-12.columns abbish is a good boy
+      .medium-6.columns {{name}}
+      .medium-6.columns dashboard.main
+      .medium-12.columns {{controller.abbish}}
+      .medium-12.columns
+        a(ui-sref="dashboard.create") Create Dashboard
+      .medium-12.columns
+        a(ui-sref="goods") Goto Goods

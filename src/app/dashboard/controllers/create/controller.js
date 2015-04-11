@@ -4,7 +4,7 @@ angular.module('sales.dashboard')
   .config(function ($stateProvider) {
     $stateProvider
       .state('dashboard.create', {
-        url: '/create',
+        url: '/create/:user_id',
         views: {
           '@': {
             templateUrl: 'app/dashboard/controllers/create/view.html',
@@ -13,7 +13,9 @@ angular.module('sales.dashboard')
         }
       });
   })
-  .controller('dashboard.create', function ($scope, $window) {
+  .controller('dashboard.create', function ($scope, $window, $stateParams) {
     $scope.name = 'dashboard.create';
     $window.document.title = "dashboard.create";
+
+    console.log($stateParams);
   });

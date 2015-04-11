@@ -15,5 +15,5 @@ angular.module('sales.dashboard')
   })
   .controller('dashboard.main', function ($scope, $window) {
     $scope.name = 'dashboard.main';
-    $window.document.title = "dashboard.main";
+    $window.document.title = 'dashboard.main';
   });

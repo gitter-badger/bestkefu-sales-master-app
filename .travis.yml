@@ -11,5 +11,4 @@ install:
   - bower install
 
 script:
-  - gulp clean
   - gulp test

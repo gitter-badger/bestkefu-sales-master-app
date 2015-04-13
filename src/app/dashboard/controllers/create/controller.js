@@ -14,6 +14,5 @@ angular.module('sales.dashboard')
       });
   })
   .controller('dashboard.create', function ($scope, $window) {
-    $scope.name = 'dashboard.create';
     $window.document.title = "dashboard.create";
   });

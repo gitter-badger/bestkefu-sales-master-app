@@ -15,6 +15,5 @@ describe('sales.dashboard component navbar test', function(){
 
   it('should define hello', inject(function($controller) {
 
-    expect(scope.date).toBeDefined();
   }));
 });

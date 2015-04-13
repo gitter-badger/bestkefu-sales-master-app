@@ -14,6 +14,5 @@ angular.module('sales.goods')
       });
   })
   .controller('goods.main', function ($scope, $window) {
-    $scope.name = 'goods.main';
     $window.document.title = "goods";
   });

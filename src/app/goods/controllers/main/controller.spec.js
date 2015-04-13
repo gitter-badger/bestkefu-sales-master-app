@@ -15,7 +15,5 @@ describe('sales.goods main controller test case', function(){
 
   it('should define name', inject(function($controller) {
 
-    expect(scope.name).toBeDefined();
-    expect(scope.name).toBe('goods.main');
   }));
 });

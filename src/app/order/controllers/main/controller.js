@@ -14,6 +14,5 @@ angular.module('sales.order')
       });
   })
   .controller('order.main', function ($scope, $window, $rootScope) {
-    $scope.name = 'order.main';
     $window.document.title = "order";
   });

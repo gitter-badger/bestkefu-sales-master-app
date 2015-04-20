@@ -14,7 +14,7 @@ module.exports = function(options) {
 
   function runProtractor (done) {
 
-    gulp.src(options.e2e + '/**/*.js')
+    gulp.src(options.e2e + '/**/*.spec.js')
       .pipe($.protractor.protractor({
         configFile: 'protractor.conf.js'
       }))
@@ -30,6 +30,6 @@ module.exports = function(options) {
   }
 
   gulp.task('protractor', ['protractor:src']);
-  gulp.task('protractor:src', ['serve:e2e', 'webdriver-update'], runProtractor);
-  gulp.task('protractor:dist', ['serve:e2e-dist', 'webdriver-update'], runProtractor);
+  gulp.task('protractor:src', ['webdriver-update', 'serve:e2e'], runProtractor);
+  gulp.task('protractor:dist', ['webdriver-update', 'serve:e2e-dist'], runProtractor);
 };

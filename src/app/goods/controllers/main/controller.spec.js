@@ -1,6 +1,6 @@
 'use strict';
 
-describe('sales.goods main controller test case', function(){
+describe('GoodsMainController', function(){
   var scope;
 
   beforeEach(module('sales.goods'));
@@ -8,7 +8,7 @@ describe('sales.goods main controller test case', function(){
   beforeEach(inject(function($rootScope, $controller) {
     scope = $rootScope.$new();
 
-    $controller('goods.main', {
+    $controller('GoodsMainController', {
       $scope: scope
     });
   }));

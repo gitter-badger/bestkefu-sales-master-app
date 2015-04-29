@@ -8,7 +8,7 @@ describe('sales.dashboard main controller test case', function(){
   beforeEach(inject(function($rootScope, $controller) {
     scope = $rootScope.$new();
 
-    $controller('dashboard.main', {
+    $controller('DashboardMainController', {
       $scope: scope
     });
   }));

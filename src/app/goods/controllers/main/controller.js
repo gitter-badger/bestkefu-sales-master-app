@@ -8,11 +8,11 @@ angular.module('sales.goods')
         views: {
           '@': {
             templateUrl: 'app/goods/controllers/main/view.html',
-            controller: 'goods.main as controller'
+            controller: 'GoodsMainController as vm'
           }
         }
       });
   })
-  .controller('goods.main', function ($scope, $window) {
+  .controller('GoodsMainController', function ($scope, $window) {
     $window.document.title = "goods";
   });

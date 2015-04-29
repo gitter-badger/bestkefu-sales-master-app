@@ -5,5 +5,5 @@ angular.module('sales', [
   'sales.goods',
   'sales.order',
 ]).config(function ($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/dashboard');
+  $urlRouterProvider.otherwise('/');
 });

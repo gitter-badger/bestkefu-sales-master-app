@@ -2,6 +2,7 @@
 
 angular.module('sales.order',
   [
+    'sales.common',
     'ngAnimate',
     'ngCookies',
     'ngTouch',

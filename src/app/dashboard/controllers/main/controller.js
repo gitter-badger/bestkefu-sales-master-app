@@ -4,15 +4,15 @@ angular.module('sales.dashboard')
   .config(function ($stateProvider) {
     $stateProvider
       .state('dashboard', {
-        url: '/dashboard',
+        url: '/',
         views: {
           '@': {
             templateUrl: 'app/dashboard/controllers/main/view.html',
-            controller: 'dashboard.main as controller'
+            controller: 'DashboardMainController as controller'
           }
         }
       });
   })
-  .controller('dashboard.main', function ($scope, $window) {
+  .controller('DashboardMainController', function ($scope, $window) {
     $window.document.title = 'dashboard.main';
   });

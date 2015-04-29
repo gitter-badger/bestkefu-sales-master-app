@@ -2,6 +2,7 @@
 
 angular.module('sales.goods',
   [
+    'sales',
     'ngAnimate',
     'ngCookies',
     'ngTouch',

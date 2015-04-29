@@ -12,8 +12,4 @@ describe('sales.dashboard main controller test case', function(){
       $scope: scope
     });
   }));
-
-  it('should define name', inject(function($controller) {
-
-  }));
 });

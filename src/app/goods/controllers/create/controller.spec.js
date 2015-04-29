@@ -14,16 +14,17 @@ describe('GoodsCreateController', function(){
     });
   }));
 
-  it('should defined form data structure from goods schema', inject(function($rootScope, $controller) {
+  it('should same to goods schema for form data structure', inject(function(GoodsSchema) {
 
     expect(vm.data).toBeDefined();
-    expect(vm.data.name).toBeDefined();
-    expect(vm.data.code).toBeDefined();
-    expect(vm.data.status).toBeDefined();
+
+    _.each(GoodsSchema.structure, function(item, index){
+      expect(vm.data[index]).toBeDefined();
+    });
 
   }));
 
-  it('should has error when form data is invalid', inject(function($controller) {
+  it('should has error when form data is invalid', inject(function() {
 
   }));
 });

@@ -14,9 +14,9 @@ angular.module('sales.goods')
       });
   })
   .controller('GoodsCreateController', function ($scope, $window, GoodsSchema) {
-    $window.document.title = "Create Goods";
+    $window.document.title = 'Create Goods';
 
     _.extend(this, {
-      data: GoodsSchema.dataStructure()
+      data: GoodsSchema.structure
     });
   });

@@ -14,5 +14,5 @@ angular.module('sales.goods')
       });
   })
   .controller('GoodsMainController', function ($scope, $window) {
-    $window.document.title = "goods";
+    $window.document.title = 'Goods';
   });

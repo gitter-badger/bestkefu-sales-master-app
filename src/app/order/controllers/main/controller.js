@@ -13,6 +13,6 @@ angular.module('sales.order')
         }
       });
   })
-  .controller('OrderMainController', function ($scope, $window, $rootScope) {
-    $window.document.title = "order";
+  .controller('OrderMainController', function ($scope, $window) {
+    $window.document.title = 'order';
   });

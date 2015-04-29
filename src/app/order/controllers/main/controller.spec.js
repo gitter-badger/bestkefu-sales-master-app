@@ -13,7 +13,7 @@ describe('OrderMainController', function(){
     });
   }));
 
-  it('should define name', inject(function($controller) {
+  it('should define name', inject(function() {
 
   }));
 });

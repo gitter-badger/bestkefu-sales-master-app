@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
-angular.module('sales.goods').service('GoodsSchema', function (CommonSchemaService) {
+angular.module('sales.goods').constant('GoodsSchema', {
 
-  this.dataStructure = function () {
-    return {
-      name: "",
-      code: "",
-      status: ""
-    };
-  };
+  structure: {
+    id: null,
+    name: null,
+    code: null,
+    status: null
+  }
+
 });

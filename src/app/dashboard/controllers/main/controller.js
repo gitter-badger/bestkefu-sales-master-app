@@ -14,5 +14,5 @@ angular.module('sales.dashboard')
       });
   })
   .controller('DashboardMainController', function ($scope, $window) {
-    $window.document.title = 'dashboard.main';
+    $window.document.title = 'Dashboard';
   });

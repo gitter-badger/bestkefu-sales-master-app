@@ -12,8 +12,4 @@ describe('GoodsMainController', function(){
       $scope: scope
     });
   }));
-
-  it('should define name', inject(function($controller) {
-
-  }));
 });

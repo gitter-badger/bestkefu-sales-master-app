@@ -1,6 +1,6 @@
 'use strict';
 
-describe('sales.dashboard main controller test case', function(){
+describe('DashboardMainController', function(){
   var scope;
 
   beforeEach(module('sales.dashboard'));
@@ -12,4 +12,8 @@ describe('sales.dashboard main controller test case', function(){
       $scope: scope
     });
   }));
+
+  it('abbish', function () {
+    expect(1).toBe(1);
+  });
 });

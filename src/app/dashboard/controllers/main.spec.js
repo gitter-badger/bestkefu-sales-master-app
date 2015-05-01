@@ -2,20 +2,20 @@
   'use strict';
 
   describe('DashboardMainController', function () {
-    var scope;
+    var scope, vm;
 
     beforeEach(module('sales.dashboard'));
 
     beforeEach(inject(function ($rootScope, $controller) {
       scope = $rootScope.$new();
 
-      $controller('DashboardMainController', {
+      vm = $controller('DashboardMainController', {
         $scope: scope
       });
     }));
 
-    it('abbish', function () {
-      expect(1).toBe(1);
+    it('should defained vm', function () {
+      expect(vm).toBeDefined();
     });
   });
 

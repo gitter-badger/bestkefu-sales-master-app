@@ -8,7 +8,7 @@
           url: '/goods',
           views: {
             '@': {
-              templateUrl: 'app/goods/controllers/main/view.html',
+              templateUrl: 'app/goods/views/main.html',
               controller: 'GoodsMainController as vm'
             }
           }

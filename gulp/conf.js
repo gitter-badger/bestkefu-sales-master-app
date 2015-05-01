@@ -8,6 +8,10 @@
 
 var gutil = require('gulp-util');
 
+exports.project = {
+  module: 'sales'
+}
+
 /**
  *  The main paths of your project handle these with care
  */

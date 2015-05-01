@@ -8,8 +8,8 @@
           url: '/',
           views: {
             '@': {
-              templateUrl: 'app/dashboard/controllers/main/view.html',
-              controller: 'DashboardMainController as controller'
+              templateUrl: 'app/dashboard/views/main.html',
+              controller: 'DashboardMainController as vm'
             }
           }
         });

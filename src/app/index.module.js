@@ -3,7 +3,8 @@
 
   angular.module('sales', [
     'sales.dashboard',
-    'sales.goods'
+    'sales.goods',
+    'sales.order'
   ]).config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
   });

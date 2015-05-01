@@ -38,7 +38,7 @@ module.exports = function(config) {
 
     ngHtml2JsPreprocessor: {
       stripPrefix: 'src/',
-      moduleName: 'test'
+      moduleName: 'sales'
     },
 
     browsers : ['PhantomJS'],

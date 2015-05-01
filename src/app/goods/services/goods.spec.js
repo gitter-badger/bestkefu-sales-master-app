@@ -1,18 +1,24 @@
-'use strict';
+(function () {
 
-describe('GoodsService', function(){
+  'use strict';
 
-  beforeEach(module('sales.goods'));
+  describe('GoodsService', function () {
 
-  it('should return goods data when find by id', inject(function(GoodsService, GoodsSchema) {
+    beforeEach(module('sales.goods'));
 
-    var data = GoodsService.find(1);
+    it('should return goods data when find by id', inject(function (GoodsService, GoodsSchema) {
 
-    _.each(GoodsSchema.structure, function (item, index) {
-      expect(data[index]).toBeDefined();
-    });
+      var data = GoodsService.find(1);
 
-    expect(data.id).toBe(1);
+      _.each(GoodsSchema.structure, function (item, index) {
+        expect(data[index]).toBeDefined();
+      });
 
-  }));
-});
+      expect(data.id).toBe(1);
+    }));
+  });
+})();
+
+
+
+

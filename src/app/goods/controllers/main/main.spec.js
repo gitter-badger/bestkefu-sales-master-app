@@ -1,15 +1,18 @@
-'use strict';
+(function () {
+  'use strict';
 
-describe('GoodsMainController', function(){
-  var scope;
+  describe('GoodsMainController', function () {
+    var scope;
 
-  beforeEach(module('sales.goods'));
+    beforeEach(module('sales.goods'));
 
-  beforeEach(inject(function($rootScope, $controller) {
-    scope = $rootScope.$new();
+    beforeEach(inject(function ($rootScope, $controller) {
+      scope = $rootScope.$new();
 
-    $controller('GoodsMainController', {
-      $scope: scope
-    });
-  }));
-});
+      $controller('GoodsMainController', {
+        $scope: scope
+      });
+    }));
+  });
+
+})();

@@ -1,9 +1,12 @@
-'use strict';
+(function () {
+  'use strict';
 
-angular.module('sales.common',
-  [
-    'ngAnimate',
-    'ngCookies',
-    'restangular'
-  ]
-);
+  angular.module('sales.common',
+    [
+      'ngAnimate',
+      'ngCookies',
+      'restangular'
+    ]
+  );
+
+})();

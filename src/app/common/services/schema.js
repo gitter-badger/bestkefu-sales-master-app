@@ -1,19 +1,25 @@
-'use strict';
+(function () {
+  'use strict';
 
-angular.module('sales.common').service('CommonSchemaService', function() {
+  angular.module('sales.common').service('CommonSchemaService', CommonSchemaService);
 
-  var service = {
-    applyData: function(structure, data) {
+  /** @ngInject */
+  function CommonSchemaService() {
 
-      var result = {};
+    var service = {
+      applyDataToStructure: function (structure, data) {
 
-      _.each(structure, function(value, key){
-        result[key] = _.isUndefined(data[key]) ? value : data[key];
-      });
+        var result = {};
 
-      return result;
-    }
-  };
+        _.each(structure, function (value, key) {
+          result[key] = _.isUndefined(data[key]) ? value : data[key];
+        });
 
-  return service;
-});
+        return result;
+      }
+    };
+
+    return service;
+  }
+
+})();

@@ -1,11 +1,14 @@
-'use strict';
+(function () {
+  'use strict';
 
-describe('GoodsSchema', function(){
+  describe('GoodsSchema', function () {
 
-  beforeEach(module('sales.goods'));
+    beforeEach(module('sales.goods'));
 
-  it('should defined data structure', inject(function(GoodsSchema) {
+    it('should defined data structure', inject(function (GoodsSchema) {
 
-    expect(GoodsSchema.structure).toBeDefined();
-  }));
-});
+      expect(GoodsSchema.structure).toBeDefined();
+    }));
+  });
+
+})();

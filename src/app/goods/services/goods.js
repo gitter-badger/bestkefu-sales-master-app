@@ -1,15 +1,23 @@
-'use strict';
+(function () {
+  'use strict';
 
-angular.module('sales.goods').factory('GoodsService', function (GoodsSchema, CommonSchemaService) {
+  angular.module('sales.goods').factory('GoodsService', GoodsService);
 
-  var service = {
-    find: function (id) {
+  /** @ngInject */
+  function GoodsService(GoodsSchema, CommonSchemaService) {
 
-      return CommonSchemaService.applyData(GoodsSchema.structure, {
-        id: id
-      });
-    }
-  };
+    var service = {
+      find: function (id) {
 
-  return service;
-});
+        return CommonSchemaService.applyDataToStructure(GoodsSchema.structure, {
+          id: id
+        });
+      }
+    };
+
+    return service;
+  }
+
+})();
+
+

@@ -14,6 +14,6 @@ describe('OrderMainController', function(){
   }));
 
   it('should define name', inject(function() {
-
+    expect(true).toBe(true);
   }));
 });

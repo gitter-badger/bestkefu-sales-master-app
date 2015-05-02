@@ -6,11 +6,22 @@
     describe('main', function () {
 
       beforeEach(function () {
-        browser.get('http://localhost:3000');
+        browser.get('http://localhost:3000/#/');
       });
 
-      it('should view main page title', function () {
-        expect(true).toBe(true);
+      it('should view dashboard main page', function () {
+
+        browser.getTitle().then(function(title) {
+          expect(title).toBe('Dashboard');
+        })
+
+        element(by.css('a[href="#/goods"]')).getText().then(function(text) {
+          expect(text).toBe('Goto Goods');
+        });
+
+        element(by.css('a[href="#/order"]')).getText().then(function(text) {
+          expect(text).toBe('Goto Order');
+        });
       });
     });
   });

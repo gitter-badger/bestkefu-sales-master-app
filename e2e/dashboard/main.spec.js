@@ -20,7 +20,7 @@
         });
 
         element(by.css('a[href="#/order"]')).getText().then(function(text) {
-          expect(text).toBe('Goto Order');
+          expect(text).toBe('Goto Bii');
         });
       });
     });

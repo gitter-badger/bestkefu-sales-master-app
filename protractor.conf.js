@@ -1,17 +1,11 @@
 'use strict';
 
+var _ = require('lodash');
 var paths = require('./.yo-rc.json')['generator-gulp-angular'].props.paths;
 
 // An example configuration file.
-exports.config = {
-  // The address of a running selenium server.
-  //seleniumAddress: 'http://localhost:4444/wd/hub',
-  //seleniumServerJar: deprecated, this should be set on node_modules/protractor/config.json
 
-  // Capabilities to be passed to the webdriver instance.
-  capabilities: {
-    'browserName': 'chrome'
-  },
+var config = {
 
   // Spec patterns are relative to the current working directly when
   // protractor is called.
@@ -23,3 +17,25 @@ exports.config = {
     defaultTimeoutInterval: 30000
   }
 };
+
+if(process.env['TEAMCITY_CI'])
+{
+  _.extend(config, {
+    seleniumAddress: 'http://localhost:4444',
+    capabilities: {
+      'browserName': 'phantomjs'
+    }
+  });
+}
+else
+{
+  _.extend(config, {
+    capabilities: {
+      'browserName': 'chrome'
+    }
+  });
+}
+
+console.log(config);
+
+exports.config = config;

@@ -1,6 +1,15 @@
 (function () {
   'use strict';
 
+  /** @ngInject */
+  function GoodsCreateController($scope, $window, GoodsSchema) {
+    $window.document.title = 'Create Goods';
+
+    _.extend(this, {
+      data: GoodsSchema.structure
+    });
+  }
+
   angular.module('sales.goods')
     .config(function ($stateProvider) {
       $stateProvider
@@ -15,14 +24,5 @@
         });
     })
     .controller('GoodsCreateController', GoodsCreateController);
-
-  /** @ngInject */
-  function GoodsCreateController($scope, $window, GoodsSchema) {
-    $window.document.title = 'Create Goods';
-
-    _.extend(this, {
-      data: GoodsSchema.structure
-    });
-  }
 })();
 

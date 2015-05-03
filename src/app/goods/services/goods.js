@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  angular.module('sales.goods').factory('GoodsService', GoodsService);
-
   /** @ngInject */
   function GoodsService(GoodsSchema, CommonSchemaService) {
 
@@ -17,6 +15,8 @@
 
     return service;
   }
+
+  angular.module('sales.goods').factory('GoodsService', GoodsService);
 
 })();
 

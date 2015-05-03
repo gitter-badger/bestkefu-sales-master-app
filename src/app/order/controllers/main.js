@@ -1,6 +1,11 @@
 (function () {
   'use strict';
 
+  /** @ngInject */
+  function OrderMainController($scope, $window) {
+    $window.document.title = 'Order';
+  }
+
   angular.module('sales.order')
     .config(function ($stateProvider) {
       $stateProvider
@@ -16,8 +21,4 @@
     })
     .controller('OrderMainController', OrderMainController);
 
-  /** @ngInject */
-  function OrderMainController($scope, $window) {
-    $window.document.title = 'Order';
-  }
 })();

@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  angular.module('sales.common').service('CommonSchemaService', CommonSchemaService);
-
   /** @ngInject */
   function CommonSchemaService() {
 
@@ -21,5 +19,7 @@
 
     return service;
   }
+
+  angular.module('sales.common').service('CommonSchemaService', CommonSchemaService);
 
 })();

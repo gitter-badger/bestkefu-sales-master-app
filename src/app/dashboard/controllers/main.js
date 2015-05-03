@@ -1,6 +1,11 @@
 (function () {
   'use strict';
 
+  /** @ngInject */
+  function DashboardMainController($scope, $window) {
+    $window.document.title = 'Dashboard';
+  }
+
   angular.module('sales.dashboard')
     .config(function ($stateProvider) {
       $stateProvider
@@ -16,8 +21,4 @@
     })
     .controller('DashboardMainController', DashboardMainController);
 
-  /** @ngInject */
-  function DashboardMainController($scope, $window) {
-    $window.document.title = 'Dashboard';
-  }
 })();
